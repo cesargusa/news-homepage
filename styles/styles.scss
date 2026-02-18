@@ -1,17 +1,126 @@
-body{
+@font-face {
+    font-family: Inter;
+    src: url(https://fonts.google.com/specimen/Inter);
+}
 
+$soft-orange-color : hsl(35, 77%, 62%);
+$soft-red-color : hsl(5, 85%, 63%);
+$dark-grayish-blue-color : hsl(236, 13%, 42%);
+$very-dark-blue-color :  hsl(240, 100%, 5%);
+
+
+@mixin font-style($family, $size, $color){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+
+header{
+    nav{
+
+        margin: 0px 0px 50px 0px;
+    }
+}
+body{
     background-color: white;
-    padding: 50px 150px;
+    padding: 40px 100px;
+    font-family: 'Inter';
 }
 
 nav{
     ul{
-        list-style: none;
+       list-style: none;
+    }
+    
+    li{
+        @include font-style('Inter', '15px' , $dark-grayish-blue-color);
+        margin:10px
+        
+        
+    }
+    li:hover{
+        cursor: pointer;
+        color : $soft-orange-color
     }
 }
 
+h1{
+    @include font-style('Inter', '15px' , $very-dark-blue-color);
+    font-weight: bolder; 
+}
+.div-info{
+    button{
+        @include font-style('Inter', '15px' , $very-dark-blue-color);
+        text-transform: uppercase;
+        background-color: $soft-red-color;
+        padding: 12px 23px;
+        border: 0px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+    button:hover{
+        cursor: pointer;
+        color:white;
+        background-color: $very-dark-blue-color;
+    }
+
+    p{
+        color:$dark-grayish-blue-color
+    }
+}
+main{
+    article {
+        img{
+            width: 50%;
+        }
+    }
+}
 .nav-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+figure{
+    margin: 0px;
+    // display: flex;
+    img{
+    width: 50rem;
+
+    }
+}
+section{
+    article{
+        max-width: 350px;
+    }
+    margin: 100px 0px;
+        header{
+            p{
+                                margin:5px 0px;
+
+                color:$dark-grayish-blue-color
+            }
+            h3{
+                                margin:5px 0px;
+
+                @include font-style('Inter', '15px' , $soft-red-color);
+            }
+            h2{
+                @include font-style('Inter', '15px' , $very-dark-blue-color);
+                                margin:5px 0px;
+            }
+            h2:hover{
+                cursor: pointer;
+                color:$soft-orange-color
+            }
+        }
+}
+
+
+ .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
