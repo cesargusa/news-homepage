@@ -1,0 +1,14 @@
+body {
+  background-color: white;
+  padding: 50px 150px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */
