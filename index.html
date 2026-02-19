@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/styles.css">
 
-  
+
   <title>Frontend Mentor | News homepage</title>
 
 </head>
@@ -35,92 +35,103 @@
   </header>
   <main>
     <div>
-      <div class="nav-container">
-
-        <article>
-          <img width="50%" src="assets/images/image-web-3-desktop.jpg">
-        </article>
-
-        <article>
-          <p>pepe</p>
-        </article>
-      </div>
-      <div class="nav-container">
+      <div class="nav-container-flex">
         <div>
+          <div class="nav-container">
 
-          <h1>
-            The Bright Future of Web 3.0?
-          </h1>
+            <article>
+              <img class="image-principal" src="assets/images/image-web-3-desktop.jpg">
+            </article>
+
+
+          </div>
+          <div class="nav-container-flex">
+            <div class="div-width-container">
+
+              <h1>
+                The Bright Future of Web 3.0?
+              </h1>
+            </div>
+            <div class="div-info div-width-container">
+              <p>
+                We dive into the next evolution of the web that claims to put the power of the platforms back into the
+                hands
+                of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button>
+                Read more
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="div-info">
-          <p>
-            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
-            of the people.
-            But is it really fulfilling its promise?
-          </p>
-          <button>
-            Read more
-          </button>
+        <div class="section-new" style="max-width: 30%;">
+          <section>
+            <h3>New</h3>
+            <article>
+              <h2> Hydrogen VS Electric Cars</h2>
+              <span>
+                Will hydrogen-fueled cars ever catch up to EVs?
+
+              </span>
+              <hr>
+            </article>
+             <article>
+              <h2>
+  The Downsides of AI Artistry
+                 </h2>
+              <span>
+                 What are the possible adverse effects of on-demand AI image generation?
+
+
+              </span>
+              <hr>
+            </article>
+             <article>
+              <h2>   Is VC Funding Drying Up?
+</h2>
+              <span>
+                  Private funding by VC firms is down 50% YOY. We take a look at what that means.
+
+
+              </span>
+              <hr>
+            </article>
+          </section>
         </div>
       </div>
 
 
-      <section class="nav-container" style="flex-flow: wrap;">
-        <article>
-          <div style="display: flex;">
-            <figure>
-              <img width="50rem" src="assets/images/image-retro-pcs.jpg">
-            </figure>
-            <div>
-              <header>
-                <h3>01</h3>
-                <h2>
-                  Reviving Retro PCs
-                </h2>
-                <p>
-                  What happens when old PCs are given modern upgrades?
-                </p>
-              </header>
-            </div>
+
+      <section class="articles-grid">
+        <article class="article-card" style="display: flex;">
+          <img width="70%" height="70%" src="assets/images/image-retro-pcs.jpg" alt="Retro PCs">
+          <div class="article-content">
+            <span class="article-number">01</span>
+            <h2>Reviving Retro PCs</h2>
+            <p>What happens when old PCs are given modern upgrades?</p>
           </div>
         </article>
-        <article>
-          <div style="display: flex;">
-            <figure>
-              <img src="assets/images/image-top-laptops.jpg">
-            </figure>
-            <div>
-              <header>
-                <h3>02</h3>
-                <h2>
-  Top 10 Laptops of 2022
-                </h2>
-                <p>
-  Our best picks for various needs and budgets.
-                </p>
-              </header>
-            </div>
+
+        <article class="article-card" style="display: flex;">
+          <img width="70%" height="70%" src="assets/images/image-top-laptops.jpg" alt="Top Laptops">
+          <div class="article-content">
+            <span class="article-number">02</span>
+            <h2>Top 10 Laptops of 2022</h2>
+            <p>Our best picks for various needs and budgets.</p>
           </div>
         </article>
-        <article>
-          <div style="display: flex;">
-            <figure>
-              <img src="assets/images/image-gaming-growth.jpg">
-            </figure>
-            <div>
-              <header>
-                <h3>03</h3>
-                <h2>
-  The Growth of Gaming
-                </h2>
-                <p>
-  How the pandemic has sparked fresh opportunities.
-                </p>
-              </header>
-            </div>
+
+        <article class="article-card" style="display: flex;">
+          <img width="70%" height="70%" src="assets/images/image-gaming-growth.jpg" alt="Gaming Growth">
+          <div class="article-content">
+            <span class="article-number">03</span>
+            <h2>The Growth of Gaming</h2>
+            <p>How the pandemic has sparked fresh opportunities.</p>
           </div>
         </article>
       </section>
+
     </div>
   </main>
 
@@ -133,24 +144,16 @@
 
 
 
-  Read more
 
-  New
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
 
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
 
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
 
 
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">César Gutiérrez</a>.
+    Coded by <a href="https://cesargutierrez.vercel.app" target="_blank">César Gutiérrez</a>.
   </div>
 </body>
 

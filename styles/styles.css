@@ -1,47 +1,116 @@
 @font-face {
-  font-family: Inter;
+  font-family: "Inter";
   src: url(https://fonts.google.com/specimen/Inter);
 }
-header nav {
-  margin: 0px 0px 50px 0px;
+@media (max-width: 900px) {
+  .nav-container-flex {
+    display: block !important;
+  }
+  .div-width-container {
+    width: 100% !important;
+  }
+  .section-new {
+    max-width: 100% !important;
+  }
+}
+.width-div-container {
+  width: 50%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container-prueba {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.nav-container-flex {
+  display: flex;
+}
+
+.articles-grid {
+  margin: 100px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.articles-grid span {
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 30px;
+  color: hsl(5, 85%, 63%);
+}
+.articles-grid h2 {
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 20px;
+  color: hsl(240, 100%, 5%);
+}
+.articles-grid h2:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+.articles-grid p {
+  font-family: "Inter";
+  font-weight: "";
+  font-size: 15px;
+  color: hsl(236, 13%, 42%);
+}
+.articles-grid img {
+  margin: 0px 20px;
+}
+
+.article-card {
+  max-width: 80%;
 }
 
 body {
   background-color: white;
-  padding: 40px 100px;
+  padding: 4% 10%;
   font-family: "Inter";
 }
 
+nav {
+  margin: 0;
+}
 nav ul {
   list-style: none;
 }
 nav li {
   font-family: "Inter";
-  font-size: "15px";
+  font-weight: "15px";
+  font-size: 12px;
   color: hsl(236, 13%, 42%);
   margin: 10px;
 }
 nav li:hover {
   cursor: pointer;
-  color: hsl(35, 77%, 62%);
+  color: hsl(5, 85%, 63%);
 }
 
 h1 {
   font-family: "Inter";
-  font-size: "15px";
+  font-weight: 900;
+  font-size: 40px;
   color: hsl(240, 100%, 5%);
   font-weight: bolder;
 }
 
 .div-info button {
   font-family: "Inter";
-  font-size: "15px";
+  font-weight: 900;
+  font-size: 12px;
   color: hsl(240, 100%, 5%);
   text-transform: uppercase;
   background-color: hsl(5, 85%, 63%);
   padding: 12px 23px;
   border: 0px;
-  font-weight: bold;
+  font-weight: bolder;
   letter-spacing: 3px;
 }
 .div-info button:hover {
@@ -53,48 +122,84 @@ h1 {
   color: hsl(236, 13%, 42%);
 }
 
-main article img {
-  width: 50%;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.image-principal {
+  width: 100%;
+  max-width: 1300px;
 }
 
 figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0px;
 }
-figure img {
-  width: 50rem;
+
+.article-individual {
+  width: 100%;
+}
+.article-individual img {
+  margin-right: 20px;
 }
 
-section article {
-  max-width: 350px;
+hr {
+  margin: 40px 0px;
+  height: 0.1px;
 }
+
+.section-new {
+  padding: 0px 30px;
+  background-color: hsl(240, 100%, 5%);
+}
+.section-new h2 {
+  font-family: "Inter";
+  font-weight: "";
+  font-size: "30px";
+  color: white;
+}
+.section-new h2:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+.section-new h3 {
+  font-family: "Inter";
+  font-weight: "";
+  font-size: 30px;
+  color: hsl(35, 77%, 62%);
+  margin: 0px;
+}
+.section-new span {
+  color: hsl(236, 13%, 42%);
+}
+
 section {
   margin: 100px 0px;
 }
 section header p {
-  margin: 5px 0px;
+  font-family: "Inter";
+  font-weight: "";
+  font-size: 12px;
   color: hsl(236, 13%, 42%);
+  margin: 5px 0px;
 }
 section header h3 {
   margin: 5px 0px;
   font-family: "Inter";
-  font-size: "15px";
+  font-weight: 900;
+  font-size: 25px;
   color: hsl(5, 85%, 63%);
+  font-weight: bolder;
 }
 section header h2 {
   font-family: "Inter";
-  font-size: "15px";
+  font-weight: 900;
+  font-size: 15px;
   color: hsl(240, 100%, 5%);
   margin: 5px 0px;
+  font-weight: bold;
 }
 section header h2:hover {
   cursor: pointer;
-  color: hsl(35, 77%, 62%);
+  color: hsl(5, 85%, 63%);
 }
 
 .attribution {

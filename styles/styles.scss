@@ -1,126 +1,226 @@
 @font-face {
-    font-family: Inter;
+    font-family: 'Inter';
     src: url(https://fonts.google.com/specimen/Inter);
+
 }
 
 $soft-orange-color : hsl(35, 77%, 62%);
 $soft-red-color : hsl(5, 85%, 63%);
 $dark-grayish-blue-color : hsl(236, 13%, 42%);
-$very-dark-blue-color :  hsl(240, 100%, 5%);
+$very-dark-blue-color : hsl(240, 100%, 5%);
 
 
-@mixin font-style($family, $size, $color){
-    font-family: $family;
-    font-size: $size;
+@media (max-width: 900px) {
+    .nav-container-flex {
+        display: block !important;
+
+    }
+
+    .div-width-container {
+        width: 100% !important;
+
+    }
+
+    .section-new {
+        max-width: 100% !important;
+    }
+}
+
+@mixin font-style($weight, $color, $font-size :12px) {
+    font-family: 'Inter';
+    font-weight: $weight;
+    font-size: $font-size;
     color: $color;
 }
 
-header{
-    nav{
-
-        margin: 0px 0px 50px 0px;
-    }
-}
-body{
-    background-color: white;
-    padding: 40px 100px;
-    font-family: 'Inter';
+.width-div-container {
+    width: 50%;
 }
 
-nav{
-    ul{
-       list-style: none;
-    }
-    
-    li{
-        @include font-style('Inter', '15px' , $dark-grayish-blue-color);
-        margin:10px
-        
-        
-    }
-    li:hover{
-        cursor: pointer;
-        color : $soft-orange-color
-    }
-}
-
-h1{
-    @include font-style('Inter', '15px' , $very-dark-blue-color);
-    font-weight: bolder; 
-}
-.div-info{
-    button{
-        @include font-style('Inter', '15px' , $very-dark-blue-color);
-        text-transform: uppercase;
-        background-color: $soft-red-color;
-        padding: 12px 23px;
-        border: 0px;
-        font-weight: bold;
-        letter-spacing: 3px;
-    }
-    button:hover{
-        cursor: pointer;
-        color:white;
-        background-color: $very-dark-blue-color;
-    }
-
-    p{
-        color:$dark-grayish-blue-color
-    }
-}
-main{
-    article {
-        img{
-            width: 50%;
-        }
-    }
-}
-.nav-container{
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-figure{
-    margin: 0px;
-    // display: flex;
-    img{
-    width: 50rem;
 
-    }
+.nav-container-prueba {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
-section{
-    article{
-        max-width: 350px;
-    }
+
+.nav-container-flex {
+    display: flex;
+}
+
+.articles-grid {
     margin: 100px 0px;
-        header{
-            p{
-                                margin:5px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 
-                color:$dark-grayish-blue-color
-            }
-            h3{
-                                margin:5px 0px;
+    span {
+        @include font-style(900, $soft-red-color , 30px)
+    }
 
-                @include font-style('Inter', '15px' , $soft-red-color);
-            }
-            h2{
-                @include font-style('Inter', '15px' , $very-dark-blue-color);
-                                margin:5px 0px;
-            }
-            h2:hover{
-                cursor: pointer;
-                color:$soft-orange-color
-            }
+    h2 {
+        @include font-style(900, $very-dark-blue-color , 20px)
+    }
+
+    h2:hover {
+        color: $soft-red-color;
+        cursor: pointer;
+    }
+
+    p {
+        @include font-style("", $dark-grayish-blue-color , 15px)
+    }
+
+    img {
+        margin: 0px 20px;
+    }
+}
+
+.article-card {
+    max-width: 80%;
+}
+body {
+    background-color: white;
+    padding: 4% 10%;
+    font-family: 'Inter';
+}
+
+nav {
+    margin: 0;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        @include font-style('15px', $dark-grayish-blue-color);
+        margin: 10px
+    }
+
+    li:hover {
+        cursor: pointer;
+        color: $soft-red-color
+    }
+}
+
+h1 {
+    @include font-style(900, $very-dark-blue-color, 40px);
+    font-weight: bolder;
+}
+
+.div-info {
+
+    button {
+        @include font-style(900, $very-dark-blue-color);
+        text-transform: uppercase;
+        background-color: $soft-red-color;
+        padding: 12px 23px;
+        border: 0px;
+        font-weight: bolder;
+        letter-spacing: 3px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        color: white;
+        background-color: $very-dark-blue-color;
+    }
+
+    p {
+        color: $dark-grayish-blue-color
+    }
+}
+
+.image-principal {
+    width: 100%;
+    max-width: 1300px;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.article-individual {
+    width: 100%;
+
+    img {
+
+        margin-right: 20px;
+    }
+
+}
+
+hr {
+    margin: 40px 0px;
+    height: 0.1px;
+}
+
+.section-new {
+    padding: 0px 30px;
+    background-color: $very-dark-blue-color;
+
+    h2 {
+        @include font-style("", white, "30px")
+    }
+
+    h2:hover {
+        color: $soft-orange-color;
+        cursor: pointer;
+    }
+
+    h3 {
+        @include font-style("", $soft-orange-color , 30px);
+        margin: 0px
+    }
+
+    span {
+        color: $dark-grayish-blue-color;
+    }
+}
+
+section {
+    margin: 100px 0px;
+
+    header {
+        p {
+            @include font-style('', $dark-grayish-blue-color, 12px);
+            margin: 5px 0px;
+
         }
+
+        h3 {
+            margin: 5px 0px;
+            @include font-style(900, $soft-red-color, 25px);
+            font-weight: bolder
+        }
+
+        h2 {
+            @include font-style(900, $very-dark-blue-color, 15px);
+            margin: 5px 0px;
+            font-weight: bold
+        }
+
+        h2:hover {
+            cursor: pointer;
+            color: $soft-red-color
+        }
+    }
 }
 
 
- .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
