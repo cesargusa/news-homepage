@@ -1,8 +1,16 @@
-@font-face {
-  font-family: "Inter";
-  src: url(https://fonts.google.com/specimen/Inter);
-}
 @media (max-width: 900px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: white;
+    transition: right 0.3s ease;
+  }
+  nav.active {
+    right: 0;
+  }
   .nav-container-flex {
     display: block !important;
   }
@@ -12,7 +20,56 @@
   .section-new {
     max-width: 100% !important;
   }
+  body {
+    padding: 3% !important;
+  }
+  .section-new {
+    margin: 80px 0px !important;
+  }
+  .menu-toggle {
+    display: block !important;
+  }
+  header {
+    margin: 20px 0px;
+  }
+  .div-width-container p {
+    margin: 10px 0px 30px 0px;
+  }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
 .width-div-container {
   width: 50%;
 }
@@ -36,7 +93,7 @@
 .articles-grid {
   margin: 100px 0px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 .articles-grid span {
@@ -63,6 +120,10 @@
 }
 .articles-grid img {
   margin: 0px 20px;
+}
+
+.article-content h2 {
+  margin: 10px 0px;
 }
 
 .article-card {
@@ -141,13 +202,21 @@ figure {
   margin-right: 20px;
 }
 
+.article-card img {
+  max-width: 12vh;
+  min-width: 12vh;
+  max-height: 15vh;
+  min-height: 15vh;
+}
+
 hr {
   margin: 40px 0px;
   height: 0.1px;
 }
 
 .section-new {
-  padding: 0px 30px;
+  margin: 0px 30px;
+  padding: 30px 30px;
   background-color: hsl(240, 100%, 5%);
 }
 .section-new h2 {
@@ -155,6 +224,7 @@ hr {
   font-weight: "";
   font-size: "30px";
   color: white;
+  margin: 15px 0px;
 }
 .section-new h2:hover {
   color: hsl(35, 77%, 62%);
@@ -163,17 +233,14 @@ hr {
 .section-new h3 {
   font-family: "Inter";
   font-weight: "";
-  font-size: 30px;
+  font-size: 40px;
   color: hsl(35, 77%, 62%);
-  margin: 0px;
+  margin: 0px 0px 30px 0px;
 }
 .section-new span {
   color: hsl(236, 13%, 42%);
 }
 
-section {
-  margin: 100px 0px;
-}
 section header p {
   font-family: "Inter";
   font-weight: "";
@@ -200,6 +267,20 @@ section header h2 {
 section header h2:hover {
   cursor: pointer;
   color: hsl(5, 85%, 63%);
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .attribution {
